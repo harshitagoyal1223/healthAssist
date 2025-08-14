@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(147, 152, 152) !important;
+    color:black
+}
+.bg-body-tertiary {
+    background-color: rgb(197, 193, 193) !important;  /* override Bootstrap */
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+.chat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+
+}

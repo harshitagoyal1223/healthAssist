@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Signup</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card shadow p-4 signup-card w-100" style="max-width: 600px;">
+            <h2 class="text-center mb-4">Create Your Health Profile</h2>
+            <form method="POST" action="/signup">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="fullName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullName" name="name" placeholder="John Doe"
+                            required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com"
+                            required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="••••••••"
+                            required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+91 1234567890"
+                            required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="dob" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dob" name="dob" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" id="gender" name="gender" required>
+                            <option selected disabled>Choose...</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="address" class="form-label">Full Address</label>
+                    <input type="text" class="form-control" id="address" name="address"
+                        placeholder="1234 Health St, Apt 1, City, State" required>
+                </div>
+                <div class="mb-3">
+                    <label for="address" class="form-label">Any allergies</label>
+                    <input type="text" class="form-control" id="allergies" name="allergies"
+                        placeholder="If yes, then state its type" required>
+                </div>
+                <div class="text-end mb-3">
+                    <a href="{{ url_for('login') }}" class="small text-decoration-none">Already have an account?</a>
+                </div>
+
+                <button type="submit" class="btn btn-success w-100">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

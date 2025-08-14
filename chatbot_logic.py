@@ -1,3 +1,4 @@
+
 import re
 
 def get_bot_response(user_input):
@@ -49,3 +50,4 @@ def get_bot_response(user_input):
     # 11. Default fallback
     else:
         return "I'm not sure how to help with that. Can you please elaborate or try rephrasing?"
+
